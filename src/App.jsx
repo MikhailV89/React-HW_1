@@ -1,13 +1,16 @@
-import Card from "./components/Card.jsx";
+import Definitions from './components/Definitions.jsx';
 
 function App() {
+    const definitions = [
+        { dt: 'one', dd: 'two', id: 1 },
+        { dt: 'another term', dd: 'another description', id: 2 },
+    ];
+
     return (
         <>
-            <Card title={"Title 1"} />
-            <Card text={"Hi"} />
-            <Card title={"Title 2"} text={"how are you?"} />
+            <Definitions data={definitions} />;
         </>
-    );
+    )
 }
 
 
