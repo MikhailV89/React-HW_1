@@ -1,11 +1,12 @@
-import Card from "./components/Card.jsx";
+import ListGroup from "./components/ListGroup.jsx";
 
 function App() {
     return (
         <>
-            <Card title={"Title 1"} />
-            <Card text={"Hi"} />
-            <Card title={"Title 2"} text={"how are you?"} />
+            <ListGroup>
+                <p>one</p>
+                <p>two</p>
+            </ListGroup>;
         </>
     );
 }
