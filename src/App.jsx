@@ -1,11 +1,9 @@
-import Card from "./components/Card.jsx";
+import Progress from "./components/Progress.jsx";
 
 function App() {
     return (
         <>
-            <Card title={"Title 1"} />
-            <Card text={"Hi"} />
-            <Card title={"Title 2"} text={"how are you?"} />
+            <Progress percentage={40} />;
         </>
     );
 }
