@@ -1,11 +1,15 @@
 import Card from "./components/Card.jsx";
 
+
 function App() {
     return (
         <>
-            <Card title={"Title 1"} />
-            <Card text={"Hi"} />
-            <Card title={"Title 2"} text={"how are you?"} />
+            <Card>
+                <Card.Body>
+                    <Card.Title>Title</Card.Title>
+                    <Card.Text>Text</Card.Text>
+                </Card.Body>
+            </Card>
         </>
     );
 }

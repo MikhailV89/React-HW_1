@@ -1,22 +1,24 @@
  import React from "react";
+import Body from "./Body.jsx";
+ import Title from "./Title.jsx";
+ import Text from "./Text.jsx";
+ import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
+ import cn from 'classnames';
+
 
 class Card extends React.Component {
-    render() {
-        const { title, text } = this.props;
-        return (
-            <div className="card">
-                <div className="card-body">
-                    {title ? <h4 className="card-title">{title}</h4> : null}
-                    {text ? <p className="card-text">{text}</p> : null}
-                </div>
-            </div>
-        );
 
+    static Body = Body
+    static Title = Title
+    static Text = Text
+
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        const { children } = this.props;
+        return <div className="card"> { children } </div>
     }
 }
-
-Card.defaultProps = {
-    title: null,
-    text: null,
-};
  export default Card
