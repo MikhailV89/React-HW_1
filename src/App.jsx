@@ -1,13 +1,36 @@
-import Card from "./components/Card.jsx";
+import MyForm from "./components/MyForm";
+import {Container} from "react-bootstrap";
+import React from "react";
+import {cloneDeep} from "lodash";
+import DataTable from "./components/DataTable";
+import data from "bootstrap/js/src/dom/data.js";
 
-function App() {
-    return (
-        <>
-            <Card title={"Title 1"} />
-            <Card text={"Hi"} />
-            <Card title={"Title 2"} text={"how are you?"} />
-        </>
-    );
+
+class App extends React.Component{
+    constructor (props){
+        super(props);
+        this.state = {
+            data: null,
+            UIShowTable: false
+        }
+    }
+
+    onSubmitHandler = (formData) => {
+        const formDataCopy = cloneDeep(formData);
+        this.setState({data: formDataCopy, UIShowTable: true})
+    }
+
+    handleClick = (e) => {
+        this.setState({UIShowTable: false})
+    }
+    render() {
+        return (
+            <Container>
+                {!this.state.UIShowTable && <MyForm onSubmit={this.onSubmitHandler} formData={this.state.data}/>}
+                {this.state.UIShowTable && <DataTable tableData={this.state.data} onClickBack={this.handleClick}/>}
+            </Container>
+        );
+    }
 }
 
 
