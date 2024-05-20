@@ -1,11 +1,9 @@
-import Card from "./components/Card.jsx";
+import TodoBox from "./components/TodoBox";
 
 function App() {
     return (
         <>
-            <Card title={"Title 1"} />
-            <Card text={"Hi"} />
-            <Card title={"Title 2"} text={"how are you?"} />
+            <TodoBox/>
         </>
     );
 }
