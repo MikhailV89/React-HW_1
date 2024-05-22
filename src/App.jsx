@@ -1,11 +1,9 @@
-import Card from "./components/Card.jsx";
+import PostCatalog from "./components/PostCatalog";
 
 function App() {
     return (
         <>
-            <Card title={"Title 1"} />
-            <Card text={"Hi"} />
-            <Card title={"Title 2"} text={"how are you?"} />
+            <PostCatalog loading={true}/>
         </>
     );
 }
