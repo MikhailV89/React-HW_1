@@ -1,11 +1,10 @@
-import Card from "./components/Card.jsx";
+import MarkDownEditor from "./components/MarkDownEditor";
+import React from "react";
 
 function App() {
     return (
         <>
-            <Card title={"Title 1"} />
-            <Card text={"Hi"} />
-            <Card title={"Title 2"} text={"how are you?"} />
+            <MarkDownEditor onContentChange={console.log} />
         </>
     );
 }
