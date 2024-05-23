@@ -1,10 +1,8 @@
-import MarkDownEditor from "./components/MarkDownEditor";
-import React from "react";
-
+import PostCatalog from "./components/PostCatalog";
 function App() {
     return (
         <>
-            <MarkDownEditor onContentChange={console.log} />
+            <PostCatalog loading={true}/>
         </>
     );
 }
