@@ -1,10 +1,9 @@
-import MarkDownEditor from "./components/MarkDownEditor";
-import React from "react";
+import MainPage from "./components/MainPage";
 
 function App() {
     return (
         <>
-            <MarkDownEditor onContentChange={console.log} />
+            <MainPage />
         </>
     );
 }
